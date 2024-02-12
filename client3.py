@@ -53,7 +53,6 @@ if __name__ == "__main__":
     for _ in iter(range(N)):
         quotes = json.loads(urllib.request.urlopen(QUERY.format(random.random())).read())
 
-        """ ----------- Update to get the ratio --------------- """
         price = [0,0]
         for i in range(len(quotes)):
             stock, bid_price, ask_price, price[i] = getDataPoint(quotes[i])
